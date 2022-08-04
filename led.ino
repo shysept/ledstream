@@ -37,7 +37,7 @@ void setup() {
   pinMode(RED_LED, OUTPUT);
   pinMode(BLUE_LED, OUTPUT);
 
-//Call the TurnOn method, wait, then call TurnOff
+//Call the TurnOn method, wait, then call TurnOff 
 //TurnOn();
 //delay(5000);
 //manualColor();
