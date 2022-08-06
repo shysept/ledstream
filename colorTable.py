@@ -12,7 +12,7 @@ window.mainloop()
  """
 def colorTable():
   chosenColor=colorchooser.askcolor()
-  red,green,blue=chosenColor[0]
-  print(red,green,blue)
-  
+  redRGB,greenRGB,blueRGB=chosenColor[0]
+  print(chosenColor)
+  return(redRGB,greenRGB,blueRGB)
   

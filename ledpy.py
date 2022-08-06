@@ -1,3 +1,4 @@
+from codecs import getincrementaldecoder
 import serial #imports serial library
 import time
 import os
@@ -5,7 +6,8 @@ import time
 import ledcolors
 from tkinter import *
 from tkinter import colorchooser
-import colorTable
+from colorTable import colorTable
+
 
 #arduino serial port
 serialData= serial.Serial('com5',9600)
@@ -15,7 +17,7 @@ def pickSwitch():   #switch to pick between colors
     if (mode==0):
      colorPicker()
     elif (mode==1):
-     print('uwu')
+     colorfromTable()
     else:
      colorfromTxt()
  
@@ -56,6 +58,17 @@ def colorfromTxt():  #picks color from txt
     print(txtRGB)
     time.sleep(10)
     f.close()
+    
+
+
+def colorfromTable():  #picks color from the tkinter then returns the Red Green Blue rgb values
+    redRGB,greenRGB,blueRGB=colorTable()    
+    print("The RGB Colors are"+redRGB+" "+greenRGB+" "+blueRGB)
+    charAdd(redRGB, greenRGB, blueRGB)
+
+
+
+
         
   
 
