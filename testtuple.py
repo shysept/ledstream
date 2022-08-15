@@ -13,6 +13,7 @@ def colorfromTxt():  #picks color from txt
     with open('mixitup/rgbinputs.txt') as f:
         global redRGB,greenRGB,blueRGB,rgbCurrentValue
         txtRGB=f.read()
+        f.close()
         while rgbCurrentValue!=txtRGB:
             #print("txt rgb is "+ txtRGB)
             rgbCurrentValue=txtRGB
@@ -29,12 +30,13 @@ def colorfromTxt():  #picks color from txt
                 print(redRGB)
                 print(greenRGB)
                 print(blueRGB)
+                blueRGB=str(blueRGB)
+                print(type(blueRGB))
                 time.sleep(5)
             break
         else:
                 time.sleep(15)
             # charAdd(redRGB, greenRGB, blueRGB)                         
-        f.close()
         print("txt rgb is "+ txtRGB)   
 x=0
 

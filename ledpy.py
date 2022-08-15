@@ -9,7 +9,7 @@ from ledcolortuple import *
 
 #arduino serial port
 serialData= serial.Serial('com5',9600)
-mode=0  #mode 0 manual,  mode 1 color table, mode 2 mixitup
+mode=2  #mode 0 manual,  mode 1 color table, mode 2 mixitup
 
 def pickSwitch():   #switch to pick between colors
     if (mode==0):
@@ -51,6 +51,7 @@ def colorfromTxt():  #picks color from txt
     global rgbCurrentValue
     with open('mixitup/rgbinputs.txt') as f:
         txtRGB=f.read()
+        f.close()        
         while rgbCurrentValue!=txtRGB:        
             rgbCurrentValue=txtRGB
             #print("txt rgb is "+ txtRGB)
@@ -64,12 +65,14 @@ def colorfromTxt():  #picks color from txt
                 greenRGB=0
                 blueRGB=255            
             finally:
+                redRGB=str(redRGB)
+                greenRGB=str(greenRGB)
+                blueRGB=str(blueRGB)
                 charAdd(redRGB, greenRGB, blueRGB)                         
                 time.sleep(15)
             break
         else: #sleeps for 30 seconds if input is the same as old one
                 time.sleep(30)
-        f.close()
         print(txtRGB)
     
 
