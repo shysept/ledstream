@@ -1,6 +1,5 @@
 //Code created by Ian Buckley for an article on makeuseof.com
 
-
 //define pins for the red, green and blue LEDs
 #define RED_LED 6
 #define BLUE_LED 5
@@ -47,7 +46,7 @@ void setup() {
 }
 
 
-
+/*
 void TurnOn(){
    
     for (int i=0;i<256; i++){
@@ -72,7 +71,7 @@ delay(fadeSpeed);
       delay(fadeSpeed);
     }  
 }
-
+   */
 void TurnOff(){
     for (int i=0;i<256; i++){
           analogWrite(GREEN_LED, brightness);
@@ -87,6 +86,7 @@ void TurnOff(){
     }
 }
 
+/*
 void  testrun(){
   if (precolor==2){
     analogWrite(RED_LED, 255);
@@ -104,7 +104,8 @@ void  testrun(){
      delay(5000);
      }     
    }
-    
+    */
+   
   void customRun(){
     delay(fadeSpeed);  
     analogWrite(RED_LED,rBright);
