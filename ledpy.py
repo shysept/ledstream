@@ -94,6 +94,6 @@ while (1==1):
         myData= serialData.readline().decode('utf-8') #puts the data in myData and decodes utf-8
         #print(myData)
         pickSwitch()
-
+        print(serialData.readline().decode('ascii'))
          
 serialData.close
