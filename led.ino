@@ -147,13 +147,13 @@ void  testrun(){
 void loop(){
     incomingRGB();
     customRun();
-    Serial.println("--------------------------------------");
-    Serial.print(" Red Brightness is: ");
-    Serial.println(rBright);
-    Serial.print(" Green Brightness is: ");
-    Serial.println(gBright);
-    Serial.print(" Blue Brightness is: ");
-    Serial.println(bBright);
+    Serial.write("--------------------------------------");
+    Serial.write(" Red Brightness is: ");
+    Serial.write(rBright);
+    Serial.write(" Green Brightness is: ");
+    Serial.write(gBright);
+    Serial.write(" Blue Brightness is: ");
+    Serial.write(bBright);
    // Serial.print(" Brightness is: ");
    // Serial.println(brightness);
     delay (5000);
