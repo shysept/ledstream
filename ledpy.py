@@ -23,7 +23,7 @@ def pickSwitch():   #switch to pick between colors
      
 #RGB input ,to check if the
 rgbCurrentValue=0
- 
+i=0
  
 def charAdd(redRGB, greenRGB, blueRGB): #adds characters to RGB colors, red(*) green(;)  blue(.)  to the end of string for arduino to catch it  
                 #sends the RGB Values to Ardunio
@@ -44,7 +44,6 @@ def colorPicker():   #manual color picker
     except:
         print("Wrong input! Correct syntax: 0 0 0")
         
- 
  
  
 def colorfromTxt():  #picks color from txt
@@ -73,7 +72,9 @@ def colorfromTxt():  #picks color from txt
             break
         else: #sleeps for 30 seconds if input is the same as old one
                 time.sleep(30)
-        print(txtRGB)
+        print(txtRGB," ",i)
+        i=i+1
+        
     
 
 
