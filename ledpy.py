@@ -90,11 +90,17 @@ def colorfromTable():  #picks color from the tkinter then returns the Red Green 
 
 
 #infinite loop to continously listen to arduino 
-while (1==1):
+"""while (1==1):
     if (serialData.inWaiting()>0): #reads if there is output
         myData= serialData.readline().decode('utf-8') #puts the data in myData and decodes utf-8
         #print(myData)
         pickSwitch()
         print(serialData.readline().decode('ascii'))
+"""
+        
+while(1==1):
+    pickSwitch()
+         
+         
          
 serialData.close
