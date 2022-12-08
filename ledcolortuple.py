@@ -16,7 +16,7 @@ def colorList(mixitupInput): #takes the mixitupInput to return the RGB values fo
     maroon = color(128,0,0)
     olive = color(128,128,0)
     green = color(0,128,0)
-    purple = color(128,0,128)
+    purple = color(200,0,200) #purple
     teal = color(0,128,128)
     navy = color(0,0,128)
     maroon = color(128,0,0)
@@ -110,7 +110,7 @@ def colorList(mixitupInput): #takes the mixitupInput to return the RGB values fo
     deeppink = color(255,20,147)
     hotpink = color(255,105,180)
     lightpink = color(255,182,193)
-    pink = color(255,192,203)
+    pink = color(255,0,90) #255 192 203 old value
     antiquewhite = color(250,235,215)
     beige = color(245,245,220)
     bisque = color(255,228,196)

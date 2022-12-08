@@ -16,10 +16,6 @@ def colorTable():
   print(chosenColor)
   return(redRGB,greenRGB,blueRGB)
   
-colorTable()
-print("test")
-colorTable()
-colorTable()
   
   
   

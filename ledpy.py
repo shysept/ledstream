@@ -8,7 +8,7 @@ from colorTable import colorTable
 from ledcolortuple import *
 
 #arduino serial port
-serialData= serial.Serial('com5',9600)
+serialData= serial.Serial('com3',9600)
 mode=2  #mode 0 manual,  mode 1 color table, mode 2 mixitup
 
 def pickSwitch():   #switch to pick between colors
@@ -48,6 +48,7 @@ def colorPicker():   #manual color picker
  
 def colorfromTxt():  #picks color from txt
     global rgbCurrentValue
+    global i
     with open('mixitup/rgbinputs.txt') as f:
         txtRGB=f.read()
         f.close()        

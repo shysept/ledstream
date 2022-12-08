@@ -105,6 +105,15 @@ void  testrun(){
      }     
    }
     */
+  void rainbow(){
+    delay(fadeSpeed);
+
+  }
+
+  void flashingLights(){
+
+
+  }
    
   void customRun(){
     delay(fadeSpeed);  
@@ -131,13 +140,13 @@ void  testrun(){
       gBright=greenInput.toInt();            // to get red, green, blue brightness values
       bBright=blueInput.toInt();  
 
-      Serial.println("--------------- Incoming RGB Values -----------");
+      /*Serial.println("--------------- Incoming RGB Values -----------");
       Serial.print(" Red input is : ");
       Serial.println(redInput);
       Serial.print(" Green input is : ");      
       Serial.println(greenInput);
       Serial.print(" Blue input is : ");
-      Serial.println(blueInput);
+      Serial.println(blueInput); */
       
     }
   }
@@ -147,15 +156,15 @@ void  testrun(){
 void loop(){
     incomingRGB();
     customRun();
-    Serial.write("--------------------------------------");
-    Serial.write(" Red Brightness is: ");
-    Serial.write(rBright);
-    Serial.write(" Green Brightness is: ");
-    Serial.write(gBright);
-    Serial.write(" Blue Brightness is: ");
-    Serial.write(bBright);
+   /* Serial.print("--------------------------------------");
+    Serial.print(" Red Brightness is: ");
+    Serial.print(rBright);
+    Serial.print(" Green Brightness is: ");
+    Serial.print(gBright);
+    Serial.print(" Blue Brightness is: ");
+    Serial.print(bBright);
    // Serial.print(" Brightness is: ");
    // Serial.println(brightness);
-    delay (5000);
+    delay (5000);  */
 }
 
