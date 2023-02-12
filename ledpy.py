@@ -21,18 +21,18 @@ def pickSwitch():   #switch to pick between colors
      
      
      
-#RGB input ,to check if the
+#RGB input ,to check if the current RGB value is same as the new input or not
 rgbCurrentValue=0
 i=0
- 
-def charAdd(redRGB, greenRGB, blueRGB): #adds characters to RGB colors, red(*) green(;)  blue(.)  to the end of string for arduino to catch it  
-                #sends the RGB Values to Ardunio
+brightness=100 #standard brightness value
+
+def charAdd(redRGB, greenRGB, blueRGB): #adds characters to RGB colors, red(*) green(;)  blue(.)  to the end of string for arduino to catch it    
         redRGB= redRGB+'*' #adds * ;  .  to the end of string for arduino to catch it 
         greenRGB= greenRGB+';'
         blueRGB= blueRGB+'.'
         serialData.write(redRGB.encode())
         serialData.write(greenRGB.encode())
-        serialData.write(blueRGB.encode())            
+        serialData.write(blueRGB.encode())            #sends the RGB Values to Ardunio 
 
 def colorPicker():   #manual color picker
     try:
@@ -44,7 +44,6 @@ def colorPicker():   #manual color picker
     except:
         print("Wrong input! Correct syntax: 0 0 0")
         
- 
  
 def colorfromTxt():  #picks color from txt
     global rgbCurrentValue
@@ -65,9 +64,9 @@ def colorfromTxt():  #picks color from txt
                 greenRGB=0
                 blueRGB=255            
             finally:
-                redRGB=str(redRGB)
-                greenRGB=str(greenRGB)
-                blueRGB=str(blueRGB)
+                redRGB=str(round((redRGB/100)*brightness)) 
+                greenRGB=str(round((greenRGB/100)*brightness))
+                blueRGB=str(round((blueRGB/100)*brightness)) #all of these are rounded because it made LEDS turnoff for whatever reason
                 charAdd(redRGB, greenRGB, blueRGB)                         
                 time.sleep(15)
             break

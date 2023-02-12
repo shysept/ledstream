@@ -1,5 +1,3 @@
-//Code created by Ian Buckley for an article on makeuseof.com
-
 //define pins for the red, green and blue LEDs
 #define RED_LED 6
 #define BLUE_LED 5
